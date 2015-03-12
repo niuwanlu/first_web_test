@@ -13,60 +13,61 @@
     </style>
 </head>
 <body>
-<h1>
-    Add a User
-</h1>
+<%--<h1>--%>
+    <%--Add a User--%>
+<%--</h1>--%>
 
 
-    <table>
-            <tr>
-                <td>
-                    <form:label path="id">
-                        <spring:message text="ID"/>
-                    </form:label>
-                </td>
-            </tr>
-        <tr>
-            <td>
-                <label for="username">
-                    <spring:message text="Name"/>
-                </label>
-                <input name="username" id="username"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="password">
-                    <spring:message text="Password"/>
-                </label>
-                <input name="password" id="password"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                    <input type="submit"
-                           value="<spring:message text="Add User"/>" />
-            </td>
-        </tr>
-    </table>
+    <%--<table>--%>
+            <%--<tr>--%>
+                <%--<td>--%>
+                    <%--<form:label path="id">--%>
+                        <%--<spring:message text="ID"/>--%>
+                    <%--</form:label>--%>
+                <%--</td>--%>
+            <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>--%>
+                <%--<label for="username">--%>
+                    <%--<spring:message text="Name"/>--%>
+                <%--</label>--%>
+                <%--<input name="username" id="username"/>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>--%>
+                <%--<label for="password">--%>
+                    <%--<spring:message text="Password"/>--%>
+                <%--</label>--%>
+                <%--<input name="password" id="password"/>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>--%>
+                    <%--<input type="submit"--%>
+                           <%--value="<spring:message text="Add User"/>" />--%>
+            <%--</td>--%>
+        <%--</tr>--%>
+    <%--</table>--%>
 
-<br>
+<%--<br>--%>
 
-<h3>Users List</h3>
-    <table class="tg">
-        <tr>
-            <th width="80">User ID</th>
-            <th width="120">User Name</th>
-            <th width="120">User Password</th>
-        </tr>
-        <c:forEach items="${listUsers}" var="person">
-            <tr>
-                <td>${person.id}</td>
-                <td>${person.name}</td>
-                <td>${person.country}</td>
-            </tr>
-        </c:forEach>
-    </table>
-
+<%--<h3>Users List</h3>--%>
+    <%--<table class="tg">--%>
+        <%--<tr>--%>
+            <%--<th width="80">User ID</th>--%>
+            <%--<th width="120">User Name</th>--%>
+            <%--<th width="120">User Password</th>--%>
+        <%--</tr>--%>
+        <%--<c:forEach items="${listUsers}" var="person">--%>
+            <%--<tr>--%>
+                <%--<td>${person.id}</td>--%>
+                <%--<td>${person.name}</td>--%>
+                <%--<td>${person.country}</td>--%>
+            <%--</tr>--%>
+        <%--</c:forEach>--%>
+    <%--</table>--%>
+${id}
+${username}
 </body>
 </html>

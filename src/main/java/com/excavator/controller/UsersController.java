@@ -1,7 +1,7 @@
 package com.excavator.controller;
 
-import com.excavator.model.Users;
-import com.excavator.service.UsersService;
+import com.excavator.model.User;
+import com.excavator.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -10,27 +10,32 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
+
 @Controller
 public class UsersController {
 
     @Autowired(required = true)
-    private UsersService usersService;
+    private UserService userService;
 
-    @Qualifier(value = "usersService")
-    public void setUsersService(UsersService us) {
-        this.usersService = us;
+    @Qualifier(value = "userService")
+    public void setUserService(UserService us) {
+        this.userService = us;
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String listUsers(Model model) {
-        model.addAttribute("user", new Users());
-        model.addAttribute("listUsers", this.usersService.listUsers());
+        ArrayList<User> userList = (ArrayList<User>)userService.listUsers();
+        User tempUser = userList.get(0);
+        model.addAttribute("id", tempUser.getId());
+        model.addAttribute("username", tempUser.getUsername());
+//        model.addAttribute("listUser", this.userService.listUsers());
         return "user";
     }
 
-    @RequestMapping(value = "/users/add", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("user") Users user) {
-            this.usersService.addUser(user);
-        return "redirect:/users";
+    @RequestMapping(value = "/user/add", method = RequestMethod.POST)
+    public String addUser(@ModelAttribute("user") User user) {
+            this.userService.addUser(user);
+        return "redirect:/user";
     }
 }

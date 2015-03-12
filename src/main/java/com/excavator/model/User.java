@@ -3,14 +3,18 @@ package com.excavator.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USERS")
-public class Users {
+@Table(name = "USER")
+public class User {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "USERNAME", nullable = false)
     private String username;
+
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
 
     public int getId() {
