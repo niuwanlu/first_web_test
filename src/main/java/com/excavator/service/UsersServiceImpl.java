@@ -1,7 +1,7 @@
-package com.sprhib.service;
+package com.excavator.service;
 
-import com.sprhib.dao.UsersDAO;
-import com.sprhib.model.Users;
+import com.excavator.dao.UsersDAO;
+import com.excavator.model.Users;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

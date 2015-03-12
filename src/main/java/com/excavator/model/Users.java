@@ -1,4 +1,4 @@
-package com.sprhib.model;
+package com.excavator.model;
 
 import javax.persistence.*;
 

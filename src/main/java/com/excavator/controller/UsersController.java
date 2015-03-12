@@ -1,7 +1,7 @@
-package com.sprhib.controller;
+package com.excavator.controller;
 
-import com.sprhib.model.Users;
-import com.sprhib.service.UsersService;
+import com.excavator.model.Users;
+import com.excavator.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,7 @@ public class UsersController {
     public String listUsers(Model model) {
         model.addAttribute("user", new Users());
         model.addAttribute("listUsers", this.usersService.listUsers());
-        return "users";
+        return "user";
     }
 
     @RequestMapping(value = "/users/add", method = RequestMethod.POST)

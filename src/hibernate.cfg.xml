@@ -18,7 +18,7 @@
         <property name="hibernate.show_sql">true</property>
 
         <!-- 加载指定映射文件 -->
-        <mapping resource="com/sprhib/model/Users.hbm.xml"/>
+        <mapping resource="com/excavator/model/Users.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

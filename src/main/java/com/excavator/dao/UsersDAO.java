@@ -1,6 +1,6 @@
-package com.sprhib.dao;
+package com.excavator.dao;
 
-import com.sprhib.model.Users;
+import com.excavator.model.Users;
 
 import java.util.List;
 

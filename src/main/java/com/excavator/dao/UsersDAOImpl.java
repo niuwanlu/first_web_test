@@ -1,6 +1,6 @@
-package com.sprhib.dao;
+package com.excavator.dao;
 
-import com.sprhib.model.Users;
+import com.excavator.model.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
