@@ -13,9 +13,8 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-
-    <mvc:annotation-driven/>
-
+    <context:component-scan base-package="com.excavator" />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/" />
@@ -27,9 +26,9 @@
                 destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url"
-                        value="jdbc:mysql://localhost:3306/TestDB" />
-        <property name="username" value="pankaj" />
-        <property name="password" value="pankaj123" />
+                        value="jdbc:mysql://localhost:3306/excavator" />
+        <property name="username" value="rdlian" />
+        <property name="password" value="password" />
     </bean>
 
     <!-- Hibernate 4 SessionFactory Bean definition -->
@@ -51,16 +50,14 @@
         </property>
     </bean>
 
-    <bean id="usersDAO" class="com.excavator.dao.UsersDAOImpl">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
-    </bean>
-    <bean id="usersService" class="com.excavator.service.UsersServiceImpl">
-        <property name="usersDAO" ref="usersDAO"></property>
-    </bean>
+    <!--<bean id="usersDAO" class="com.excavator.dao.UsersDAOImpl">-->
+        <!--<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />-->
+    <!--</bean>-->
+    <!--<bean id="usersService" class="com.excavator.service.UsersServiceImpl">-->
+        <!--<property name="usersDAO" ref="usersDAO"></property>-->
+    <!--</bean>-->
 
 
-    <context:component-scan base-package="com.excavator" />
-    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />

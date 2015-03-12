@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UsersController {
 
+    @Autowired(required = true)
     private UsersService usersService;
 
-    @Autowired(required = true)
     @Qualifier(value = "usersService")
     public void setUsersService(UsersService us) {
         this.usersService = us;
