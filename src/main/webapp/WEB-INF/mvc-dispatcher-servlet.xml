@@ -26,7 +26,7 @@
                 destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url"
-                        value="jdbc:mysql://localhost:3306/excavator" />
+                        value="jdbc:mysql://localhost:3306/excavator?useUnicode=true&amp;characterEncoding=utf-8" />
         <property name="username" value="rdlian" />
         <property name="password" value="password" />
     </bean>

@@ -1,7 +1,10 @@
 package com.excavator.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component
 @Entity
 @Table(name = "USER")
 public class User {
