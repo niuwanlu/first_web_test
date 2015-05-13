@@ -14,7 +14,6 @@ import javax.persistence.*;
 public class NewsLinkExisted {
     @Id
     @Column(name = "NEWS_ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int news_id;
     @Column(name = "THUMBNAIL")
     private String thumbnail;

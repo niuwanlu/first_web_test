@@ -11,7 +11,6 @@ public class User {
 
     @Id
     @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "USERNAME", nullable = false)
